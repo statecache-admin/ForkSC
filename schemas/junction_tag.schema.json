@@ -1,0 +1,95 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ForkSC Junction Tag",
+  "description": "Schema for tagging semantic junctions in agent reasoning graphs.",
+  "type": "object",
+  "required": ["junction_id", "junction_type", "description", "confidence", "alternatives_held"],
+  "properties": {
+    "junction_id": {
+      "type": "string",
+      "description": "Unique identifier for this junction within the session."
+    },
+    "junction_type": {
+      "type": "string",
+      "enum": ["definition_point", "logic_junction", "inflection_point"],
+      "description": "The type of reasoning junction."
+    },
+    "description": {
+      "type": "string",
+      "description": "Human-readable description of what decision or framing occurred at this junction."
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Agent's self-assessed confidence in the chosen path (0-1)."
+    },
+    "stakes": {
+      "type": "string",
+      "enum": ["low", "medium", "high", "critical"],
+      "description": "The stakes level of this junction for downstream reasoning."
+    },
+    "reversibility": {
+      "type": "string",
+      "enum": ["clean", "partial", "expensive", "irreversible"],
+      "description": "How costly it would be to redirect from this junction later."
+    },
+    "alternatives_held": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["branch_id", "summary"],
+        "properties": {
+          "branch_id": {
+            "type": "string",
+            "description": "Identifier for this unchosen alternative."
+          },
+          "summary": {
+            "type": "string",
+            "description": "Brief description of the alternative path."
+          },
+          "weight_at_fork": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "description": "How strongly this alternative was weighted before the chosen path was selected."
+          }
+        }
+      },
+      "description": "Alternative reasoning paths that were considered but not taken."
+    },
+    "drift_delta": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Measured divergence from session objective (0 = aligned, 1 = fully drifted). Present only on inflection_points."
+    },
+    "cache_checkpoint_ref": {
+      "type": "string",
+      "description": "Reference to the KV-cache checkpoint at this junction for recomputation."
+    },
+    "human_intervention": {
+      "type": "object",
+      "properties": {
+        "operator_id": {
+          "type": "string",
+          "description": "Identifier for the human operator."
+        },
+        "operation": {
+          "type": "string",
+          "enum": ["redirect", "redefine", "reanchor", "hold", "branch_compare", "parse", "refine"],
+          "description": "The navigation operation performed."
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "rationale": {
+          "type": "string",
+          "description": "Human-provided reason for the intervention."
+        }
+      },
+      "description": "Record of human navigation at this junction, if any."
+    }
+  }
+}
