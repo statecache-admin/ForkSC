@@ -1,0 +1,72 @@
+# ForkSC Open Licence V1.0
+
+**Effective: March 2026**
+
+---
+
+## 1. Definitions
+
+**"The Specification"** means the ForkSC architecture specification, junction tag schema, and all associated documentation published in this repository.
+
+**"State Cache Systems"** means the entity designated as the IP steward of the ForkSC specification and the enforcer of the Civic Covenant.
+
+**"Commercial Use"** means any use of an implementation of the Specification in a product, service, or system that generates revenue, or is deployed within an organisation that generates revenue, whether or not the implementation itself is the revenue source.
+
+**"Non-Commercial Use"** means use for personal learning, academic research, non-profit civic administration, and any use by a Qualifying Civic Entity as defined below.
+
+**"Qualifying Civic Entity"** means any of the following: a Community Land Trust registered under applicable legislation; a Community Benefit Society with a statutory asset lock; a Ward-level or equivalent local governance body operating under a sovereign commons framework; a non-profit municipal organisation whose primary purpose is community governance; and any community governance framework that preserves the invariant core commitments of The Sovereign Commons (community land sovereignty, mutual credit as commons infrastructure, AI-assisted administration with legible reasoning, restorative conflict resolution, and civic education as ongoing governance capacity).
+
+---
+
+## 2. Non-Commercial and Civic Use
+
+The Specification is freely available for Non-Commercial Use. No licence fee, no registration, no conditions beyond preservation of this licence notice in derivative works.
+
+Qualifying Civic Entities may use, implement, deploy, modify, and distribute implementations of the Specification — including locally hosted, air-gapped deployment — at zero cost, in perpetuity, without condition.
+
+---
+
+## 3. Commercial Use
+
+Commercial Use of any implementation of the Specification requires a commercial licence from State Cache Systems.
+
+Commercial licence terms will be published separately and will be structured to be accessible to small and medium-sized enterprises, not only to well-resourced corporations.
+
+Every commercial licence issued carries the Civic Covenant (Section 4) as a non-waivable, non-severable condition.
+
+---
+
+## 4. The Civic Covenant
+
+The Civic Covenant is a founding structural condition of this licence. It is not a charitable concession. It is an architectural feature of the ForkSC specification.
+
+**4.1** Every commercial implementation of the Specification must provide perpetual, zero-cost, full-stack access to Qualifying Civic Entities. This includes the right to locally host, air-gap, and operate the implementation without any dependency on the commercial provider's infrastructure, pricing, or continued existence.
+
+**4.2** The Civic Covenant is irrevocable. It survives any change of ownership, acquisition, merger, restructuring, bankruptcy, or dissolution of any commercial entity holding a licence under this agreement.
+
+**4.3** The Civic Covenant is non-waivable. No Qualifying Civic Entity may be asked or required to waive their rights under the Covenant as a condition of any agreement.
+
+**4.4** Violation of the Civic Covenant constitutes automatic termination of the commercial licence.
+
+---
+
+## 5. Contributions
+
+Contributions to this repository are accepted under the same terms as this licence. Contributors retain copyright in their contributions and grant State Cache Systems a perpetual, non-exclusive licence to distribute those contributions under this licence.
+
+---
+
+## 6. No Warranty
+
+The Specification is provided as-is, without warranty of any kind. State Cache Systems accepts no liability for any implementation of the Specification.
+
+---
+
+## 7. Governing Law
+
+This licence is governed by the laws of England and Wales.
+
+---
+
+*ForkSC Open Licence V1.0 · March 2026*
+*State Cache Systems*
